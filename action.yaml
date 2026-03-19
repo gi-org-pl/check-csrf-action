@@ -1,0 +1,16 @@
+name: Check CRLF line endings
+description: Fails if any tracked files contain CRLF line endings
+author: gi-org-pl
+
+inputs:
+  base-ref:
+    description: Base branch to compare against
+    required: false
+    default: main
+
+runs:
+  using: composite
+  steps:
+    - name: Check for CRLF line endings
+      shell: sh
+      run: ${{ github.action_path }}/check-crlf.sh ${{ inputs.base-ref }}
