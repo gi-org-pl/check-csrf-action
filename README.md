@@ -6,7 +6,7 @@ A GitHub Action that fails if any tracked files in the repository contain CRLF l
 
 ```yaml
 - name: Check for CRLF line endings
-  uses: oskarb/check-crlf-action@v1
+  uses: gi-org-pl/check-crlf-action@v1
   with:
     base-ref: ${{ github.base_ref }}
 ```
@@ -34,7 +34,7 @@ jobs:
           fetch-depth: 0
 
       - name: Check for CRLF line endings
-        uses: oskarb/check-crlf-action@v1
+        uses: gi-org-pl/check-crlf-action@v1
         with:
           base-ref: ${{ github.base_ref }}
 ```
